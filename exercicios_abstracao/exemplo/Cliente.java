@@ -1,4 +1,4 @@
-package Exemplo;
+package exercicios_abstracao.exemplo;
 
 public class Cliente {
     String nome;
