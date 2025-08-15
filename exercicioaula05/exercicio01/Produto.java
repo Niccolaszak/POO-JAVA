@@ -5,9 +5,17 @@ class Produto {
     private String nome;
     private double preco;
 
+    public String getNome() {
+        return nome;
+    }
+
     // Construtor vazio
     public Produto() {
         System.out.println("Produto criado");
+    }
+
+    public double getPreco() {
+        return preco;
     }
 
     // Construtor com parâmetros
