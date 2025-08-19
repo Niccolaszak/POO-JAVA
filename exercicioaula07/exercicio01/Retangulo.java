@@ -1,15 +1,22 @@
 package exercicioaula07.exercicio01;
 
-class Retangulo extends Forma {
-    private double base;
-    private double altura;
+public class Retangulo extends Forma {
+    private final double largura;
+    private final double altura;
 
-    public double getBase() {return base;}   
-    public void setBase(double base) {this.base = base;}
-    public double getAltura() {return altura;}
-    public void setAltura(double altura) {this.altura = altura;}
+    public Retangulo(String nome, double largura, double altura) {
+        super(nome, "base * altura"); // subclasse passa a fórmula
+        this.largura = largura;
+        this.altura = altura;
+    }
 
-    public double calcularArea() {
-        return base * altura;
+    @Override
+    public double area() {
+        return largura * altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Retângulo: " + getNome() + " | Fórmula: " + getFormula() + " | Área = " + area();
     }
 }

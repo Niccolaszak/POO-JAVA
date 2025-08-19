@@ -1,12 +1,29 @@
 package exercicioaula07.exercicio01;
 
-class Forma {
-    private String cor;
-    private boolean preenchida ;
+public class Forma {
+    protected String nome;
+    protected String formula;
 
-    public String getCor() {return cor;}   
-    public void setCor(String cor) {this.cor = cor;}
-    public boolean isPreenchida() {return preenchida;}
-    public void setPreenchida(boolean preenchida) {this.preenchida = preenchida;}
+    public Forma(String nome, String formula) {
+        this.nome = nome;
+        this.formula = formula;
+    }
 
+    public double area() {
+        System.out.println("Área genérica de forma");
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome da forma é: " + nome + " | Fórmula: " + formula;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getFormula() {
+        return this.formula;
+    }
 }
